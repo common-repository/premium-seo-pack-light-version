@@ -1,0 +1,87 @@
+/*!
+ * jQuery.tipsy
+ * Copyright (c) 2014 CreativeDream
+ * Version: 1.0 (18-11-2014)
+*/
+.tipsy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: px(6) px(8);
+    font-family: sans-serif;
+    font-size: px(12);
+    line-height: normal;
+    color: $white;
+    -webkit-border-radius: px(3);
+    border-radius: px(3);
+    background-color: $info;
+    z-index: 9999;
+}
+
+.tipsy:before {
+    position: absolute;
+    bottom: -#{px(5)};
+    left: px(5);
+    display: inline-block;
+    content: '';
+    border-right: px(5) solid transparent;
+    border-top: px(5) solid $info;
+    border-bottom: 0 solid $info;
+    border-left: px(5) solid transparent;
+}
+
+.tipsy.arrow-top:before {
+    bottom: auto;
+    top: -#{px(5)};
+    border-top-width: 0;
+    border-bottom-width: px(5);
+}
+
+.tipsy.arrow-bottom:before {
+    bottom: -#{px(5)};
+    top: auto;
+    border-top-width: px(5);
+    border-bottom-width: 0;
+}
+
+.tipsy.arrow-left:before {
+    left: px(5);
+    right: auto;
+}
+
+.tipsy.arrow-center:before {
+    left: 50%;
+    right: auto;
+    margin-left: -#{px(5)};
+}
+
+.tipsy.arrow-right:before {
+    right: px(5);
+    left: auto;
+}
+
+.tipsy.arrow-side-left:before {
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    margin-top: -#{px(5)};
+    margin-left: -#{px(5)};
+    border-right-color: $info;
+    border-top: px(5) solid transparent;
+    border-bottom: px(5) solid transparent;
+    border-left: 0;
+}
+
+.tipsy.arrow-side-right:before {
+    top: 50%;
+    bottom: auto;
+    right: 0;
+    left: auto;
+    margin-top: -#{px(5)};
+    margin-right: -#{px(5)};
+    border-left-color: $info;
+    border-top: px(5) solid transparent;
+    border-bottom: px(5) solid transparent;
+    border-right: 0;
+}
